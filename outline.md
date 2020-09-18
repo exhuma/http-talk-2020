@@ -1,17 +1,18 @@
 # Terminology <!--{{{-->
 
-Resource
-: Any "thing" that is processed by the back-end.
-: A business object
+* **Resource**
+    * Any "thing" that is processed by the back-end.
+    * A business object
 
-URI
-: Uniform Resource Identifier
-: A textual string to identify a resource
+* **URI**
+    * Uniform Resource Identifier
+    * A textual string to identify a resource
 
-URL
-: Uniform Resource *Locator*
-: A special form of a *URI* including a location of a resource.
-: A textual string to identify *and find* a resource.
+* **URL**
+    * Uniform Resource *Locator*
+    * A special form of a *URI* including a location of a resource.
+    * A textual string to identify *and find* a resource.
+
 
 <!--}}}-->
 # Common Mistakes<!--{{{-->
@@ -245,28 +246,32 @@ not belong into the payload itself.
 
 Example URL: http://www.example.com:1234/my;a=10/resource?foo=bar#hello
 
-`http://`
-: The "scheme" to use. Other examples can be `https`, `ftp`, `ssh`, ...
+* `http://`
+    * The "scheme" to use. Other examples can be `https`, `ftp`, `ssh`, ...
 
-`www.example.com`
-: The "authority" of the accessed resource (who manages/controls that resource)
+* `www.example.com`
+    * The "authority" of the accessed resource (who manages/controls that
+      resource)
 
-`:1234`
-: The port for the TCP connection
+* `:1234`
+    * The port for the TCP connection
 
-`/my;a=10/resource`
-: The "path". This is an information for the server *where* to find the resource
-: Path segments are "opaque" to the protocol. But [reserved characters in the
-  "sub-delims" group][uri-reserved] like `;` or `,` can be used by
-  application-level code. See [URI-Path][uri-path]
+* `/my;a=10/resource`
+    * The "path". This is an information for the server *where* to find the
+      resource
+    * Path segments are "opaque" to the protocol. But
+      [reserved characters in the "sub-delims" group][uri-reserved]
+      like `;` or `,` can be used by application-level code. See
+      [URI-Path][uri-path]
 
-`?foo=bar`
-: The "query" string. This contains additional values which *should not be
-  used* to uniquely identify a resource. It should already have been defined by
-  the previous URL parts.
+* `?foo=bar`
+    * The "query" string. This contains additional values which *should not be*
+      used* to uniquely identify a resource. It should already have been
+      defined by the previous URL parts.
 
-`#hello`
-: The "fragment" can be used to only request a section of a resource.
+* `#hello`
+    * The "fragment" can be used to only request a section of a resource.
+
 
 ## Rules of Thumb
 
