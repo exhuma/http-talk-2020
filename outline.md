@@ -17,6 +17,21 @@
 <!--}}}-->
 # Common Mistakes<!--{{{-->
 
+* Mixing Intended Uses of URLs, Headers & Payloads
+  * URLs should *only* identify resources
+  * Payloads should *only* contain data *decribing* the resource
+  * Headers should *only* contain *meta-data* about the client/server dialog.
+  * Ideally, no verbs should be present in a URL. Consider using a resource
+    representing a "job" or "action" instead.
+
+* Incorrect usages of HTTP Verbs
+  * `GET` should *only* be used to retrieve something from the API
+  * `POST` should *only* be used to create *new* instances of resources on the
+    server
+  * `PUT` should *only* be used to either create *new* or *update/replace* existing
+    resources on the server.
+  * `DELETE` should *only* be used to delete a resource from the server.
+
 * Using `application/json` for everything
 
   * Makes it difficult to evolve APIs
