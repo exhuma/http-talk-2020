@@ -14,7 +14,7 @@
 * Popular Mechanisms & Related Technologies:
   * [OAuth](https://oauth.net/)
   * [JWT](https://jwt.io)
-  * [Basic Auth over SSL][rfc7617]
+  * [Basic Auth over SSL](https://tools.ietf.org/html/rfc7617)
 
 ---
 

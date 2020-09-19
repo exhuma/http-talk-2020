@@ -12,6 +12,9 @@ This starting point for HTTP (which is based on RFC-5322) is
 
 MDN has [a very good article][mdn-http-msgs] on HTTP messages.
 
+[rfc-5322]: https://tools.ietf.org/html/rfc5322
+[mdn-http-msgs]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages
+
 ---
 
 ## Message Parts
@@ -40,3 +43,4 @@ MDN has [a very good article][mdn-http-msgs] on HTTP messages.
     etag: W/"5e6-4bSPS5tq8F8ZDeFJULWh6upjp7U"
 
     [{"postId": 1, ...]
+

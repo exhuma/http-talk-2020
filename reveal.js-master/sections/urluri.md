@@ -17,9 +17,14 @@
 * **ASCII encoded at protocol level** (See also [idna][idna],
   [punycode][punycode], [percent-encoding][pct-encoding])
 
+[uri-elements]: https://tools.ietf.org/html/rfc3986#section-3
+[idna]:    https://tools.ietf.org/html/rfc5890
+[punycode]: https://tools.ietf.org/html/rfc3492
+[pct-encoding]: https://tools.ietf.org/html/rfc3986#section-2.1
+
 ---
 
-## Examples (from [RFC-3986][rfc3986]):
+## Examples (from [RFC-3986](https://tools.ietf.org/html/rfc3986)):
 
     ftp://ftp.is.co.za/rfc/rfc1808.txt
     http://www.ietf.org/rfc/rfc2396.txt

@@ -52,3 +52,5 @@
   timestamp. Be explicit!
 * Use either Unix-timestamps or [ISO-8601][iso-8601] in a simple format.
   F.ex.: `2020-10-23T23:59:10.985+0200`
+
+[iso-8601]: https://www.iso.org/iso-8601-date-and-time-format.html

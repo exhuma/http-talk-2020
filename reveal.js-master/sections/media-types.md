@@ -14,6 +14,8 @@ Both the `Accept` and `Content-Type` header use "Media-Types" (often also
 called MIME-types). [The official list or registered MIME-Types][mime-types] is
 managed by IANA.
 
+[mime-types]: https://www.iana.org/assignments/media-types/media-types.xhtml
+
 Media Types are extensible using the "personal" (prefix: `prs.`) and "vendor"
 (prefix: `vnd.`) tree. The vendor tree *should* be registered with IANA, the
 personal tree is "free-text".
