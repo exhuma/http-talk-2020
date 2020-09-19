@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>Overview of HTTP</title>
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/theme/malbert.css" id="theme">
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,7 +16,18 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown="common-mistakes.md"></section>
+        <section data-markdown="sections/terminology.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/common-mistakes.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/rest.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/anatomy.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/media-types.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/content-negotiation.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/headers.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/urluri.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/authentication.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/authorisation.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/timestamps.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
+        <section data-markdown="sections/multipart.md" data-separator="^\r?\nxxx\r?\n$" data-separator-vertical="^\r?\n---\r?\n$"></section>
       </div>
     </div>
 
@@ -30,6 +41,8 @@
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
+        slideNumber: 'c/t',
+        showNotes: true,
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
