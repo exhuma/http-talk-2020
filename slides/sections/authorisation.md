@@ -12,7 +12,7 @@
 
 * A user sends a request including an `Authorization` header.
 * Processing and granting/refusing access *is up to the application*
-* If access is refused respond with a `403 Forbidden` header.
+* If access is refused respond with a `403 Forbidden` response.
 
 Note:
 

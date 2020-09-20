@@ -19,6 +19,12 @@ Note:
 
 See also [RFC-5322 Section 3.3][rfc-5322-3.3]
 
+Example:
+
+```text
+Wed, 21 Oct 2015 07:28:00 GMT
+```
+
 * *Only values in headers are defined by the HTTP RFCs!*
 * Timestamps in message payloads are application dependent
 * Timesamps in headers *must* include a Timezone offset from UTC
