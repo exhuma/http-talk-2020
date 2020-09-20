@@ -8,14 +8,26 @@
 * Authority (who controls the resource)
 * For URLs: localisation of resources (On which host the resource is available)
 
-[URI-elements][uri-elements]
-[uri-shemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+Note:
 
-* HTTP uses URIs to identify resources
-* An URL is a special form of an URI
-* Every URL is a URI. Not every URI is an URL
-* **ASCII encoded at protocol level** (See also [idna][idna],
-  [punycode][punycode], [percent-encoding][pct-encoding])
+**HTTP uses URIs to identify resources**
+
+URLs are URIs. A URI is a "Uniform Resource Identfitier". See
+[URI-elements][uri-elements].
+
+Schemes like `http` and `ftp` are
+[well-defined](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+by IANA.
+
+URIs (and URLs) are ASCII encoded at protocol level. For non-ASCII chracater
+an appropriate encoding is needed. Commonly [idna][idna] defines
+[punycode][punycode] for domain-names. For many other cases
+[percent-encoding][pct-encoding] is used.
+
+More than one URL can target the same resouce, f. ex.:
+
+    https://example.com/device/{device-id}/ports/{port-id}
+    https://example.com/ports/{port-id}
 
 [uri-elements]: https://tools.ietf.org/html/rfc3986#section-3
 [idna]:    https://tools.ietf.org/html/rfc5890
@@ -39,42 +51,63 @@
 
 ## URL Elements & Their Uses
 
-Example URL: http://www.example.com:1234/my;a=10/resource?foo=bar#hello
+Example URL:
 
-* `http://`
-    * The "scheme" to use. Other examples can be `https`, `ftp`, `ssh`, ...
+```
+http://www.example.com:1234/my;a=10/resource?foo=bar#hello
+```
 
-* `www.example.com`
-    * The "authority" of the accessed resource (who manages/controls that
-      resource)
+Note:
 
-* `:1234`
-    * The port for the TCP connection
+* `http://`  
+   The "scheme" to use.
 
-* `/my;a=10/resource`
-    * The "path". This is an information for the server *where* to find the
-      resource
-    * Path segments are "opaque" to the protocol. But
-      [reserved characters in the "sub-delims" group][uri-reserved]
-      like `;` or `,` can be used by application-level code. See
-      [URI-Path][uri-path]
+* `www.example.com`  
+  The "authority" of the accessed resource (who manages/controls that resource)
 
-* `?foo=bar`
-    * The "query" string. This contains additional values which *should not be*
-      used* to uniquely identify a resource. It should already have been
-      defined by the previous URL parts.
+* `:1234`  
+  The port for the TCP connection
 
-* `#hello`
-    * The "fragment" can be used to only request a section of a resource.
+* `/my;a=10/resource`  
+  The "path". This is an information for the server *where* to find the
+  resource.
+
+  Path segments are "opaque" to the protocol. But
+  [reserved characters in the "sub-delims" group][uri-reserved]
+  like `;` or `,` can be used by application-level code. See
+  [URI-Path][uri-path]
+
+* `?foo=bar`  
+  The "query" string contains additional values which *should not be* used to
+  uniquely identify a resource. It should already have been defined by the
+  previous URL parts. It should be mainly used to filter query results (lists).
+
+* `#hello`  
+  The "fragment" can be used to only request a section of a resource.
+
+
+[uri-reserved]: https://tools.ietf.org/html/rfc3986#section-2.2
+[uri-path]:     https://tools.ietf.org/html/rfc3986#section-3.3
 
 ---
 
 ## Rules of Thumb
 
-* Segments *should* represent a hierarchical relation of resources
-* Use query-arguments only on URLs that return collections of things to
-  *filter* that result
-* More than one URL can target the same resouce, f. ex.:
+* Hierarchical relation
+* Use query-arguments to *filter* collections/lists
+* Be consistent with `-` and `_`
+* Don't use "verbs" in URLs
 
-    https://example.com/device/{device-id}/ports/{port-id}
-    https://example.com/ports/{port-id}
+Note:
+
+Segments *should* represent a hierarchical relation of resources.
+
+Use query-arguments only on URLs that return collections of things to *filter*
+that result.
+
+Prefer using hypens (`-`) in all parts of URLS. Domain-Names disallow
+underscores so using hyphens everywhere improves consistency.
+
+If a URL contains a verb (or active speech) it hints to the use of a "job" or
+"action" on the server. These don't play well with the semantics of existing
+HTTP verbs. Avoiding verbs in URLs future-proofs the API.

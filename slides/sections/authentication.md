@@ -10,11 +10,38 @@
 
 ## How Does it Work?
 
-* **Out of Scope of HTTP**
-* Popular Mechanisms & Related Technologies:
-  * [OAuth](https://oauth.net/)
-  * [JWT](https://jwt.io)
-  * [Basic Auth over SSL](https://tools.ietf.org/html/rfc7617)
+* *Out of Scope of HTTP*
+* If the server cannot identiy the user, it response with `401 Unauthorized`
+
+Note:
+
+HTTP only defines how credentials are exchanged between client and server.
+*How* the client received these credentials (for tokens) and *how* the server
+validates those credentials is not defined in HTTP.
+
+The `401` error can mean two things:
+
+* The client did not *send* an `Authorization` header
+* The client sent *incorrect* credentials (wrong password, ...)
+
+---
+
+## Popular Mechanisms & Related Technologies
+
+* [OAuth](https://oauth.net/)
+* [JWT](https://jwt.io)
+* [Basic Auth over SSL](https://tools.ietf.org/html/rfc7617)
+
+Note:
+
+OAuth is a very popular mechanism to receive credentials.
+
+JWT (JSON Web Token) is a very popular mechanism to exchange credentials
+including additional data.
+
+Basic Auth (over SSL) is the simplest form of authentication and is very useful
+for debugging. For most authentication needs in production code I suggest using
+JWT.
 
 ---
 
