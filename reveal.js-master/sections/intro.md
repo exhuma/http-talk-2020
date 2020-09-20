@@ -6,14 +6,14 @@ HyperText Transfer Protocol
 
 ## What Problem Does it Solve?
 
-Exchanging documents between two parties.
+Exchange documents between two parties.
 
 ---
 
 ## Background
 
 * Started with "emails"
-* Defines a simple, extensible "body with envelope" structure.
+* Simple, extensible "body with envelope" structure.
 * Widely supported and robust.
 
 Note:

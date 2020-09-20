@@ -27,7 +27,7 @@ H2 {
   border-bottom: 2px solid #444; }
 
 .reveal .speaker-notes {
-  color: inherit;
+  color: #bbb8b4;
   background: #111;
   border-left: 4px solid black; }
 
@@ -38,6 +38,27 @@ H2 {
   margin-right: -1em;
   padding: 0 1em 0.5em 1em;
   background: #101010; }
+
+.speaker-notes li {
+  list-style: disc;
+  border: none;
+  padding: 0;
+  text-align: left; }
+
+.speaker-notes code {
+  font-size: 100%; }
+
+.speaker-notes H1,
+.speaker-notes H2,
+.speaker-notes H3,
+.speaker-notes H4 {
+  margin-left: -0.7em !important;
+  padding-left: 0.7em;
+  border-bottom: 1px solid #444;
+  color: #bbb8b4 !important; }
+
+.speaker-notes H1 {
+  font-size: 140% !important; }
 
 /*********************************************
  * GLOBAL STYLES

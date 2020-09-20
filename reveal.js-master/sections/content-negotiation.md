@@ -1,4 +1,6 @@
-# Content Negotiation (Accept & Content-Tpe)
+# Content Negotiation
+
+Accept & Content-Type Headers
 
 ---
 
@@ -13,12 +15,22 @@
 
 ## How Does it Work?
 
+* Client uses the `Accept` header
+* Server responds according to `Accept` (or `406`)
+* Client reads according to `Content-Type`
+
+Note:
+
 *All these steps are optional but highly recommended*
 
-* The client sends a request *including an `Accept` header*.
-* The server generates a response based on the `Accept` header.
-* The client processes the response according to the `Content-Type` header of
-  the response.
+The `Accept` header is the client saying: "Hey server, please give me
+something in this format". This can contain more than one value.
+
+If the server *can* respond in this format it returns it. If not, it will
+generate a `406 Not Acceptable` error response.
+
+If the client specified more than one `Accept` value it *must* look at the
+`Content-Type` header of the response to identify which one it received.
 
 ---
 

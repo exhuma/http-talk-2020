@@ -1,4 +1,12 @@
-# Media-Types (MIME-Types)
+# Media-Types
+
+also known as MIME-Types
+
+Note:
+
+Media-types are an extremely powerful mechanism to ensure an API is both
+future-proof and backwards-compatible. It also makes client/server
+communication much more explicit and stable.
 
 ---
 
@@ -6,9 +14,38 @@
 
 * Identification of the nature of the payload (format and encoding)
 
+Note:
+
+Consider the document:
+
+```
+{"username": "jdoe", "email": "john.doe@example.com"}
+```
+
+and
+
+```
+{"hostname": "myhost.mydomain.tld", "ip": "192.0.2.1"}
+```
+
+Both are JSON. Custom media-types help to distinguish one from the other.
+
+
+
+
 ---
 
 ## How Does it Work?
+
+* Plain-Text value to identify nature of payload
+* major & minor type
+* arguments
+
+```
+major/minor+json; arg1=value1; arg=value2
+```
+
+Note:
 
 Both the `Accept` and `Content-Type` header use "Media-Types" (often also
 called MIME-types). [The official list or registered MIME-Types][mime-types] is
