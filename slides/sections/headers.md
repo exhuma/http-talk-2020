@@ -179,7 +179,7 @@ Note:
 
 Links take the following form:
 
-```
+```http
 Link: <http://example.com/resource>; rel="self"; title="This Resource"
 ```
 

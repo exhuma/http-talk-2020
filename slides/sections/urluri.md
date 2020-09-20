@@ -38,14 +38,16 @@ More than one URL can target the same resouce, f. ex.:
 
 ## Examples (from [RFC-3986](https://tools.ietf.org/html/rfc3986)):
 
-    ftp://ftp.is.co.za/rfc/rfc1808.txt
-    http://www.ietf.org/rfc/rfc2396.txt
-    ldap://[2001:db8::7]/c=GB?objectClass?one
-    mailto:John.Doe@example.com
-    news:comp.infosystems.www.servers.unix
-    tel:+1-816-555-1212
-    telnet://192.0.2.16:80/
-    urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+```text
+ftp://ftp.is.co.za/rfc/rfc1808.txt
+http://www.ietf.org/rfc/rfc2396.txt
+ldap://[2001:db8::7]/c=GB?objectClass?one
+mailto:John.Doe@example.com
+news:comp.infosystems.www.servers.unix
+tel:+1-816-555-1212
+telnet://192.0.2.16:80/
+urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+```
 
 ---
 
@@ -53,7 +55,7 @@ More than one URL can target the same resouce, f. ex.:
 
 Example URL:
 
-```
+```text
 http://www.example.com:1234/my;a=10/resource?foo=bar#hello
 ```
 
